@@ -61,6 +61,13 @@ const getData = async () => {
   return await response.json();
 };
 
+const days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const getDayOfWeek = (date) => {
+  if (!date) return "";
+  const d = new Date(date);
+  return days[d.getDay()];
+};
+
 const formatDate = (date) => {
   if (!date) return "";
   const d = new Date(date);
@@ -109,7 +116,8 @@ const start = (json) => {
         start_date: e.start_date,
         start_time: e.event_start_time,
         date_formatted: formatDate(e.start_date),
-        time_fomatted: formatTime(e.event_start_time)
+        time_fomatted: formatTime(e.event_start_time),
+        day_of_week: getDayOfWeek(e.start_date)
       };
     })
     .sort((a, b) =>
@@ -138,7 +146,7 @@ const start = (json) => {
           <div class="meta flex items-center justify-between mt-2 text-sm text-gray-400 font-light">
             <div class="location">${event.location}</div>
             <div class="timedate">
-              ${event.date_formatted} ${event.time_fomatted}
+              ${event.day_of_week} ${event.date_formatted} ${event.time_fomatted}
             </div>
           </div>
         </div>
