@@ -128,8 +128,8 @@ const start = (json) => {
 
   const dom = events.map((event, i) => {
     return `
-    <div class="containter flex flex-row my-4 lg:w-1/2 py-5 border-b w-full">
-      <div class="flex flex-row w-full px-3 ${i % 2 ? "" : "lg:border-r"}">
+    <div class="containter flex flex-row my-4 lg:w-1/2 py-5 border-b w-full px-2 lg:px-5">
+      <div class="flex flex-row w-full ${i % 2 ? "" : "lg:border-r"}">
         <div class="event flex flex-col w-3/4">
           <div class="away flex items-center justify-between ${
             event.vscore > event.hscore ? "font-bold" : ""
