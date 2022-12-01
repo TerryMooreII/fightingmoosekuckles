@@ -51,9 +51,7 @@
       <main class="prose">
         <div class="lg:ml-48 w-full">
           <h3 class="text-center">Who's got beer this week?</h3>
-
-          
-          <div id="em"></div>
+           <div id="app" class="flex flex-col lg:flex-row w-full flex-wrap p-4 items-center"></div>
         </div>
       </main>
     </div>
@@ -66,12 +64,126 @@
   <script src="https://www.google-analytics.com/analytics.js" async></script> -->
 
   <script>
-    const url = 'https://docs.google.com/spreadsheets/d/10yet2waUUOQmNdMW7mH1nBQC4Ue6_piqAdMQh5HjDys/gviz/tq?tqx=out:html&tq&gid=0'
+    const teamid = "4112";
 
-    fetch(url).then(response => response.text()).then(text => {
-      const el = document.getElementById('em')
-      em.innerHTML = text
+const url = `https://apps.daysmartrecreation.com/dash/jsonapi/api/v1/teams/${teamid}?cache[save]=false&include=events.eventType,events.homeTeam,events.visitingTeam,events.resource.facility,events.resourceArea,events.comments,league.playoffEvents.eventType,league.playoffEvents.homeTeam,league.playoffEvents.visitingTeam,league.playoffEvents.resource.facility,league.playoffEvents.resourceArea,league.playoffEvents.comments,league.programType,product.locations,programType,season,skillLevel,ageRange,sport&company=polarice`;
+
+const sheetsUrl =
+  "https://docs.google.com/spreadsheets/d/10yet2waUUOQmNdMW7mH1nBQC4Ue6_piqAdMQh5HjDys/gviz/tq?tqx=out:html&tq&gid=0";
+
+const getData = async () => {
+  const response = await fetch(url);
+  return await response.json();
+};
+
+const formatDate = (date) => {
+  if (!date) return "";
+  const d = new Date(date);
+  return `${d.getMonth() + 1}/${d.getDate()}`;
+};
+
+const formatTime = (time) => {
+  if (!time) return "";
+  let [hour, min] = time.split(":");
+  if (+hour > 12) hour = +hour - 12;
+  return `${hour}:${min}`;
+};
+
+const start = (json) => {
+  const facilities = json.included
+    .filter((item) => item.type === "resource")
+    .reduce((acc, item) => {
+      acc[item.id] = item.attributes.name;
+      return acc;
+    }, {});
+
+  const teams = json.included
+    .filter((item) => item.type === "team")
+    .reduce((acc, item) => {
+      acc[item.id] = item.attributes.name;
+      return acc;
+    }, {});
+
+  // Add moose knucks
+  teams[json.data.id] = json.data.attributes.name;
+
+  const events = json.included
+    .filter(
+      (item) => item.type === "event" && item.attributes.event_type !== "L"
+    )
+    .map((item) => {
+      const e = item.attributes;
+      return {
+        location: facilities[e.resource_id],
+        hscore: e.hscore ?? 0,
+        vscore: e.vscore ?? 0,
+        sub_type: e.sub_type,
+        hteam: teams[e.hteam_id] ?? "Home Team",
+        vteam: teams[e.vteam_id] ?? "Away Team",
+        desc: e.desc,
+        start_date: e.start_date,
+        start_time: e.event_start_time,
+        date_formatted: formatDate(e.start_date),
+        time_fomatted: formatTime(e.event_start_time)
+      };
     })
+    .sort((a, b) =>
+      a.start_date < b.start_date ? 1 : a.start_date > b.start_date ? -1 : 0
+    );
+
+  const app = document.getElementById("app");
+
+  const dom = events.map((event, i) => {
+    return `
+    <div class="containter flex flex-row my-4 w-1/2 p-5 border-b">
+      <div class="flex flex-row w-full px-3 ${i % 2 ? "" : "lg:border-r"}">
+        <div class="event flex flex-col w-3/4">
+          <div class="away flex items-center justify-between ${
+            event.vscore > event.hscore ? "font-bold" : ""
+          }">
+            <div class="team text-lg">${event.vteam}</div>
+            <div class="score text-lg">${event.vscore}</div>
+          </div>
+          <div class="home flex items-center justify-between ${
+            event.hscore > event.vscore ? "font-bold" : ""
+          }">
+            <div class="team text-lg">${event.hteam}</div>
+            <div class="score text-lg">${event.hscore}</div>
+          </div>
+          <div class="meta flex items-center justify-between mt-2 text-sm text-gray-400 font-light">
+            <div class="location">${event.location}</div>
+            <div class="timedate">
+              ${event.date_formatted} ${event.time_fomatted}
+            </div>
+          </div>
+        </div>
+        <div class="beer flex justify-center items-center mx-6 text-center w-1/4">
+          ${beerList[event.date_formatted] ?? ""}
+        </div>
+      </div>
+    </div>`;
+  });
+  app.innerHTML = dom.join("");
+};
+
+const beerList = {};
+const getSheetData = async () => {
+  const response = await fetch(sheetsUrl);
+  return await response.text();
+};
+
+getSheetData().then((sheet) => {
+  const el = document.createElement("div");
+  el.innerHTML = sheet;
+
+  [...el.querySelectorAll("tr")].forEach((row) => {
+    const td = row.querySelectorAll("td");
+    beerList[td[1].textContent] = td[0].textContent;
+  });
+});
+
+getData().then(start);
+
 
   </script>
 </body>
