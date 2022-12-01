@@ -23,17 +23,6 @@
   rel="stylesheet"
   href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
 />
-
-<style>
-
-  #em tr td {
-    padding-left: 10px !important;
-  }
-  #em tbody tr:first-child td {
-    background-color: #ccc !important
-  }
-</style>
-
 </head>
 
 <body class="bg-gray-100">
@@ -46,14 +35,10 @@
         <div class="lg:ml-8 mt-4 lg:mt-0">
           <h1 class="lg:text-6xl text-2xl lg:text-left text-center">Fighting Moose Knuckles Hockey Club</h1>
           <!-- <h2 class="lg:text-2xl text-xl mt-2 lg:tracking-widest lg:text-left text-center">Just a Bunch of Beer League Knuckledraggers</h2> -->
-        </div>
+        </div>        
       </div>
-      <main class="prose">
-        <div class="lg:ml-48 w-full">
-          <h3 class="text-center">Who's got beer this week?</h3>
-           <div id="app" class="flex flex-col lg:flex-row w-full flex-wrap p-4 items-center"></div>
-        </div>
-      </main>
+      <h3 class="text-center text-xl mt-3">Who's got beer this week?</h3>
+      <div id="app" class="flex flex-col lg:flex-row w-full flex-wrap p-4 items-center justify-center lg:px-28"></div>
     </div>
   </div>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -135,7 +120,7 @@ const start = (json) => {
 
   const dom = events.map((event, i) => {
     return `
-    <div class="containter flex flex-row my-4 w-1/2 p-5 border-b">
+    <div class="containter flex flex-row my-4 lg:w-1/2 p-5 border-b w-full">
       <div class="flex flex-row w-full px-3 ${i % 2 ? "" : "lg:border-r"}">
         <div class="event flex flex-col w-3/4">
           <div class="away flex items-center justify-between ${
