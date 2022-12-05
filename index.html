@@ -68,6 +68,28 @@ const getDayOfWeek = (date) => {
   return days[d.getDay()];
 };
 
+const getNextEvent = (events) => {
+  const now = Date.now();
+  let diff = 0;
+  let nextEvent = null;
+  events.forEach((item) => {
+    const eventDate = new Date(item.start_date).getTime();
+    console.log(eventDate)
+    if (eventDate > now) {
+      const distance = eventDate - now;
+      if (diff === 0) {
+        diff = distance;
+        nextEvent = item;
+      } else if (distance < diff) {
+        diff = distance;
+        nextEvent = item;
+      }
+    }
+  });
+  
+  return nextEvent
+}
+
 const formatDate = (date) => {
   if (!date) return "";
   const d = new Date(date);
@@ -126,6 +148,44 @@ const start = (json) => {
 
   const app = document.getElementById("app");
 
+  const nextEvent = getNextEvent(events)
+
+  const nextEventDom = !nextEvent ? '' : `
+    <div class="flex w-full flex-col items-center border-b-4 border-grey-500 mt-16 mb-8 pb-8">
+    <h4 class="text-2xl text-center w-full"> Next Game </h4>
+    <div class="containter flex flex-row my-4 w-full lg:w-1/2 p-5">
+      <div class="flex flex-row w-full">
+        <div class="event flex flex-col w-3/4">
+          <div class="away flex items-center justify-between ${
+            nextEvent.vscore > nextEvent.hscore ? "font-bold" : ""
+          }">
+            <div class="team text-lg">${nextEvent.vteam}</div>
+            <div class="score text-lg">${nextEvent.vscore}</div>
+          </div>
+          <div class="home flex items-center justify-between ${
+            nextEvent.hscore > nextEvent.vscore ? "font-bold" : ""
+          }">
+            <div class="team text-lg">${nextEvent.hteam}</div>
+            <div class="score text-lg">${nextEvent.hscore}</div>
+          </div>
+          <div class="meta flex items-center justify-between mt-2 text-sm text-gray-400 font-light">
+            <div class="location">${nextEvent.location}</div>
+            <div class="timedate">
+              ${nextEvent.day_of_week} ${nextEvent.date_formatted} ${
+    nextEvent.time_fomatted
+  }
+            </div>
+          </div>
+        </div>
+        <div class="beer flex justify-center items-center mx-6 text-center w-1/4">
+          ${beerList[nextEvent.date_formatted] ? "🍻" : ""} <br>
+          ${beerList[nextEvent.date_formatted] ?? ""}
+        </div>
+      </div>
+    </div>
+    </div>
+  `;
+
   const dom = events.map((event, i) => {
     return `
     <div class="containter flex flex-row my-4 lg:w-1/2 py-5 border-b w-full px-2 lg:px-5">
@@ -151,12 +211,16 @@ const start = (json) => {
           </div>
         </div>
         <div class="beer flex items-center p-5 w-1/4">
-          <div class="text-center w-full">${beerList[event.date_formatted] ?? ""}</div>
+          <div class="text-center w-full">
+            ${beerList[event.date_formatted] ? "🍻" : ""} <br>
+            ${beerList[event.date_formatted] ?? ""}
+          </div>
         </div>
       </div>
     </div>`;
   });
-  app.innerHTML = dom.join("");
+  const schedule = `<h4 class="text-2xl text-center w-full mt-8"> Schedule </h4>`;
+  app.innerHTML = [nextEventDom, schedule, ...dom].join("")
 };
 
 const beerList = {};
