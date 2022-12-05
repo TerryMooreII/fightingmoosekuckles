@@ -74,7 +74,6 @@ const getNextEvent = (events) => {
   let nextEvent = null;
   events.forEach((item) => {
     const eventDate = new Date(item.start_date).getTime();
-    console.log(eventDate)
     if (eventDate > now) {
       const distance = eventDate - now;
       if (diff === 0) {
@@ -177,7 +176,7 @@ const start = (json) => {
             </div>
           </div>
         </div>
-        <div class="beer flex justify-center items-center mx-6 text-center w-1/4">
+        <div class="beer flex justify-center items-center text-center w-1/4">
           ${beerList[nextEvent.date_formatted] ? "🍻" : ""} <br>
           ${beerList[nextEvent.date_formatted] ?? ""}
         </div>
@@ -188,8 +187,8 @@ const start = (json) => {
 
   const dom = events.map((event, i) => {
     return `
-    <div class="containter flex flex-row my-4 lg:w-1/2 py-5 border-b w-full px-2 lg:px-5">
-      <div class="flex flex-row w-full ${i % 2 ? "" : "lg:border-r"}">
+    <div class="containter flex flex-row lg:w-1/2 border-b w-full">
+      <div class="flex flex-row w-full py-5 px-4 ${i % 2 ? "lg:border-l" : ""}">
         <div class="event flex flex-col w-3/4">
           <div class="away flex items-center justify-between ${
             event.vscore > event.hscore ? "font-bold" : ""
@@ -210,7 +209,7 @@ const start = (json) => {
             </div>
           </div>
         </div>
-        <div class="beer flex items-center p-5 w-1/4">
+        <div class="beer flex items-center w-1/4">
           <div class="text-center w-full">
             ${beerList[event.date_formatted] ? "🍻" : ""} <br>
             ${beerList[event.date_formatted] ?? ""}
