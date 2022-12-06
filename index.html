@@ -73,7 +73,8 @@ const getNextEvent = (events) => {
   let diff = 0;
   let nextEvent = null;
   events.forEach((item) => {
-    const eventDate = new Date(item.start_date).getTime();
+    const dt = [item.start_date.split('T')[0], item.start_time].join('T')
+    const eventDate = new Date(dt).getTime();
     if (eventDate > now) {
       const distance = eventDate - now;
       if (diff === 0) {
