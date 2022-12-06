@@ -135,7 +135,7 @@ const start = (json) => {
   const dom = events.map((event, i) => {
     return `
     <div class="containter flex flex-row lg:py-4 lg:w-1/2 border-b w-full">
-      <div class="flex flex-row w-full py-5 pl-4 ${i % 2 ? "lg:border-l" : ""}">
+      <div class="flex flex-row w-full py-5 lg:pl-16 ${i % 2 ? "lg:border-l" : ""}">
         <div class="event flex flex-col w-3/4">
           <div class="away flex items-center justify-between ${
             event.vscore > event.hscore ? "font-bold" : ""
