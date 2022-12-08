@@ -21,6 +21,7 @@ const getNextEvent = (events) => {
   let diff = 0;
   let nextEvent = null;
   events.forEach((item) => {
+    if (![item.vteam_id, item.hteam_id].includes(teamid)) return
     const dt = [item.start_date.split('T')[0], item.start_time].join('T')
     const eventDate = new Date(dt).getTime();
     if (eventDate > now) {
@@ -80,6 +81,8 @@ const start = (json) => {
         hscore: e.hscore ?? 0,
         vscore: e.vscore ?? 0,
         sub_type: e.sub_type,
+        hteam_id: e.hteam_id,
+        vteam_id: e.vteam_id,
         hteam: teams[e.hteam_id] ?? "Home Team",
         vteam: teams[e.vteam_id] ?? "Away Team",
         desc: e.desc,
