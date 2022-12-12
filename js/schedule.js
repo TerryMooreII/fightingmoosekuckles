@@ -21,7 +21,7 @@ const getNextEvent = (events) => {
   let diff = 0;
   let nextEvent = null;
   events.forEach((item) => {
-    if (![item.vteam_id, item.hteam_id].includes(teamid)) return
+    if (![item.vteam_id, item.hteam_id].includes(+teamid)) return
     const dt = [item.start_date.split('T')[0], item.start_time].join('T')
     const eventDate = new Date(dt).getTime();
     if (eventDate > now) {
