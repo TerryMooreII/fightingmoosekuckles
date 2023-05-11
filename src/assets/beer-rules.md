@@ -1,3 +1,4 @@
 - At least 24 cans of beer
-- No bud light
+- No bud light (cause it tastes like shit)
+- Mix the ice with beer in the cooler.
 - Homebrew is always welcome!
