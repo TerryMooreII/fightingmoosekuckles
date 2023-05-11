@@ -24,6 +24,8 @@ export const getSchedule = async () => {
 };
 
 export const getBeerData = async () => {
+  console.log(Env.baseUrl, Env.leagueId, Env.teamId)
+  console.log(Env.beerGoogleSheetURL)
   if (!Env.beerGoogleSheetURL) return null
   const beerList = {};
   try {
