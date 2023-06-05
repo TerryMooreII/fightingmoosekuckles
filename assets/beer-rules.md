@@ -4,8 +4,8 @@
 
 ## Small blind
 - The person who takes the first penalty of the last game must bring a 12 pack of beer
-- If we have no penalties the. the goalie must bring the small blind
-- If wenhave a shut out and no penaties the the goalie picks the person that brings the small blind
+- If we have no penalties the goalie must bring the small blind
+- If we dont have a shut out and no penaties then the goalie picks the person that brings the small blind
 
 ## Rules
 - No bud light (cause it tastes like shit)
