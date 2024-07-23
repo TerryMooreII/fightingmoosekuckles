@@ -4,7 +4,8 @@ export default `
   Barry,
   Christian, 6/11
   Kyle, 6/17
-  Vic, 7/16
+  Terry, 7/16
+  Vic, 7/23
   Syk,
   Chris,
   Andrew,
