@@ -24,7 +24,6 @@ export const getSchedule = async () => {
 };
 
 export const getBeerData = async () => {
-<<<<<<< HEAD
   if (!Env.beerCsv) return null
   try {
     const { default: csv } = await import(`../${Env.beerCsv}`)
@@ -42,26 +41,6 @@ export const getBeerData = async () => {
     return null
   }
  
-=======
-  if (!Env.beerGoogleSheetURL) return null
-  const beerList = {};
-  try {
-    const response = await fetch(Env.beerGoogleSheetURL);
-    const sheet = await response.text()
-    const el = document.createElement("div");
-    el.innerHTML = sheet;
-
-    [...el.querySelectorAll("tr")].forEach((row) => {
-      const td = row.querySelectorAll("td");
-      beerList[td[1].textContent] = td[0].textContent;
-    });
-    return beerList
-  } catch(e) {
-    console.error(e)
-  } finally {
-    state.loading = false
-  }
->>>>>>> 15d9f22 (remove testing)
 }
 
 export const getStandings = async () => {
