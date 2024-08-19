@@ -46,6 +46,9 @@ export class AppRoot {
                 <stencil-route url="/schedule" component="app-schedule"  exact={true} />
                 <stencil-route url="/standings" component="app-standings"  exact={true} />
                 <stencil-route url="/rules" component="app-rules"  exact={true} />
+                {
+                  Env.roster && <stencil-route url="/roster" component="app-roster"  exact={true} />
+                }
               </stencil-route-switch>
             </stencil-router>
             </div>
