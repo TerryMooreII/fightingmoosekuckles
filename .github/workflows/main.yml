@@ -9,6 +9,7 @@ env:
   BEER_RULES_MD_FILE: ${{ vars.BEER_RULES_MD_FILE }}
   BASE_URL: ${{ vars.BASE_URL }}
   BEER_CSV: ${{ vars.BEER_CSV }}
+  ROSTER_MD: ${{ vars.ROSTER_MD }}
 
 on:
   push:
