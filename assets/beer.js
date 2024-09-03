@@ -8,7 +8,7 @@ export default `
   Vic, 7/23
   Sky, 8/20
   Chris, 7/30
-  Andrew,
+  Andrew, 9/4
   Mark, 8/27,
   George,
   Dave,
