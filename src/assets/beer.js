@@ -1,7 +1,7 @@
 export default `
   Tommy, 5/22
   Mac, 5/29
-  Barry,
+  Barry, 9/11
   Christian, 6/11
   Mike, 
   Terry, 7/16
