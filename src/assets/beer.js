@@ -11,6 +11,6 @@ export default `
   Andrew, 9/4
   Mark, 8/27,
   George,
-  Dave,
+  Dave, 9/24
   Kevin, 6/26
 `
