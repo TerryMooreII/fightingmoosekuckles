@@ -1,5 +1,5 @@
 export default `
-  Mac 9/17,
+  Mac, 9/17,
   Barry,
   Christian,
   Mike, 
