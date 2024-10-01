@@ -1,16 +1,15 @@
 export default `
-  Tommy, 5/22
-  Mac, 5/29
-  Barry, 9/11
-  Christian, 6/11
+  Mac 9/17,
+  Barry,
+  Christian,
   Mike, 
-  Terry, 7/16
-  Vic, 7/23
-  Sky, 8/20
-  Chris, 7/30
-  Andrew, 9/4
-  Mark, 8/27,
+  Terry, 10/1, 
+  Vic,
+  Sky,
+  Chris,
+  Andrew, 9/24
+  Mark,
   George,
-  Dave, 9/24
-  Kevin, 6/26
+  Dave,
+  Kevin,
 `
