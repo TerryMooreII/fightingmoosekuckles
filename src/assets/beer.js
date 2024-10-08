@@ -1,15 +1,14 @@
 export default `
   Mac, 9/17,
-  Barry,
+  Andrew, 9/24
+  Terry, 10/1,
+  Vic, 10/8
   Christian,
-  Mike, 
-  Terry, 10/1, 
-  Vic,
   Sky,
   Chris,
-  Andrew, 9/24
   Mark,
-  George,
   Dave,
   Kevin,
+  Barry,
+  George,
 `
