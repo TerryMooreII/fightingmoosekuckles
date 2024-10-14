@@ -3,7 +3,7 @@ export default `
   Andrew, 9/24
   Terry, 10/1,
   Vic, 10/8
-  Sky, 8/20
+  Sky, 10/15
   Chris,
   Mark,
   Dave,
