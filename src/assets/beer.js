@@ -4,7 +4,7 @@ export default `
   Terry, 10/1,
   Vic, 10/8
   Sky, 10/15
-  Brian,
+  Brian, 10/23
   Chris,
   Mark,
   Dave,
