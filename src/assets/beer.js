@@ -7,7 +7,7 @@ export default `
   Brian, 10/23
   Chris,
   Mark,
-  Dave,
+  Dave, 10/29
   Kevin,
   Barry,
   George,
