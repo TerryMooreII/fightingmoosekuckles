@@ -11,5 +11,5 @@ export default `
   Kevin,
   Barry,
   George,
-  Christian,
+  Christian, 11/20
 `
