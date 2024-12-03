@@ -8,7 +8,7 @@ export default `
   Chris, 11/5
   Mark, 11/13
   Dave, 10/29
-  Kevin,
+  Kevin, 12/4
   Barry,
   George,
   Christian, 11/20
