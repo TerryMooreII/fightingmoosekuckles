@@ -1,7 +1,7 @@
 
 export default `
   Andrew,
-  Vic,
+  Vic 1/7,
   Sky, 
   Brian, 
   Chris, 
