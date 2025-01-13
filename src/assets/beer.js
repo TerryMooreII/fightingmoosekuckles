@@ -3,7 +3,7 @@ export default `
   Andrew,
   Vic 1/7,
   Sky, 
-  Brian, 
+  Brian 1/14, 
   Chris, 
   Mark, 
   Dave, 
