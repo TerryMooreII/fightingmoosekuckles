@@ -10,7 +10,7 @@ export default `
   Kevin,
   Christian,
   Barry,
-  George,
+  George, 1/21
   Terry,
 `
 
