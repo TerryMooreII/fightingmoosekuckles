@@ -4,7 +4,7 @@ export default `
   Vic 1/7,
   Sky, 
   Brian 1/14, 
-  Chris, 
+  Chris, 2/4
   Mark, 
   Dave, 
   Kevin,
