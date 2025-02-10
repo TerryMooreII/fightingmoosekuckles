@@ -1,16 +1,16 @@
 
 export default `
-  Andrew,
   Vic 1/7,
-  Sky, 
   Brian 1/14, 
+  George, 1/28
   Chris, 2/4
+  Andrew, 2/10
+  Sky, 
   Mark, 
   Dave, 
   Kevin,
   Christian,
   Barry,
-  George, 1/28
   Terry,
 `
 
