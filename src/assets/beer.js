@@ -5,7 +5,7 @@ export default `
   George, 1/28
   Chris, 2/4
   Andrew, 2/10
-  Sky, 
+  Sky, 2/18
   Mark, 
   Dave, 
   Kevin,
