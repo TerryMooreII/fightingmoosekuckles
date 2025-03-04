@@ -7,9 +7,8 @@ export default `
   Andrew, 2/11
   Sky, 2/18
   Christian, 2/25
+  Kevin, 3/4
   Mark, 
-  Dave, 
-  Kevin,
   Barry,
   Terry,
 `
