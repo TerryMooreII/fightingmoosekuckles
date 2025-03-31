@@ -9,8 +9,8 @@ export default `
   Christian, 2/25
   Kevin, 3/4
   Mark, 3/11
-  Barry,
-  Terry,
+  Barry, 3/18
+  Terry, 3/25
 `
 
 
