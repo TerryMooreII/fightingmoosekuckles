@@ -2,7 +2,6 @@
 export default `
   George, 1/28
   Andrew, 2/11
-  Sky, 2/18
   Christian, 2/25
   Kevin, 3/4
   Mark, 3/11
@@ -11,4 +10,5 @@ export default `
   Brian 4/1,
   Vic 4/8,
   Chris, 4/15
+  Sky, 4/22
 `
