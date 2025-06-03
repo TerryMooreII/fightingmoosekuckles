@@ -2,7 +2,7 @@
 export default `
   George, 1/28
   Christian, 2/25
-  Matt,
+  Matt, 6/3
   Stills
   DaveD
   Mark, 3/11
