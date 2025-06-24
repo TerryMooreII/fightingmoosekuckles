@@ -3,11 +3,11 @@ export default `
   George, 1/28
   Christian, 2/25
   Matt, 6/3
-  Stills,
+  Stills, 6/17
   DaveD, 6/10
-  Mark, 3/11
+  Terry, 6/24
   Barry, 3/18
-  Terry, 3/25
+  Mark, 3/11
   Brian, 4/1
   Vic, 4/8
   Chris, 4/15
