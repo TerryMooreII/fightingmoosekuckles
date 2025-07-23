@@ -10,7 +10,7 @@ export default `
   Mac, 7/8
   Chris, 7/15
   Andrew, 7/22
-  Barry, 3/18
+  Barry, 7/26
   Mark, 3/11
   Brian, 4/1
   Sky, 5/6
