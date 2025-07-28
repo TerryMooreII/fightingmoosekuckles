@@ -1,7 +1,5 @@
 
 export default `
-  George, 1/28
-  Christian, 2/25
   Matt, 6/3
   Sills, 6/17
   DaveD, 6/10
@@ -10,7 +8,9 @@ export default `
   Mac, 7/8
   Chris, 7/15
   Andrew, 7/22
+  Christian, 7/29
   Barry, 7/26
+  George, 1/28
   Mark, 3/11
   Brian, 4/1
   Sky, 5/6
