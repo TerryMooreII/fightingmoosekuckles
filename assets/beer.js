@@ -10,7 +10,7 @@ export default `
   Andrew, 7/22
   Christian, 7/29
   Barry, 7/26
-  George, 1/28
+  George, 8/5
   Mark, 3/11
   Brian, 4/1
   Sky, 5/6
