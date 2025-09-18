@@ -5,6 +5,7 @@ export default `
   Barry, 8/26
   Sills, 9/2
   Vic, 9/8,
+  Mac, 9/16
   Christian, 2/25
   Andrew, 4/29
   Chris, 4/15
