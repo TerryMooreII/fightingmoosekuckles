@@ -10,7 +10,7 @@ export default `
   Christian, 9/30
   Andrew, 10/7
   Chris, 10/14
-  Sky, 1/22
+  Sky, 10/21
   Mark, 3/11
   Brian, 3/18
   George, 1/28
