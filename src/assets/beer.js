@@ -8,7 +8,7 @@ export default `
   Mac, 9/16
   Matt, 9/23
   Christian, 9/30
-  Andrew, 10/7
+  Andrew, 11/11
   Chris, 10/14
   Sky, 10/21
   Dave D, 10/28
