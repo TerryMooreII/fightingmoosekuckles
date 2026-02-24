@@ -7,7 +7,7 @@ export default `
   Mac, 12/2
   Christian, 1/6
   Chris, 1/13
-  Terry, 8/12
+  Terry, 1/20
   Kevin, 8/19
   Barry, 8/26
   Matt, 9/23
