@@ -6,7 +6,10 @@ export default `
   Terry, 1/20
   Mac, 2/12
   Andrew, 2/24
-  Kevin, 8/19
+  Kevin, 3/3
+  Dan, 1/1
+  Rick, 1/1
+  Kevins Bro, 1/1
   Barry, 8/26
   Matt, 9/23
   Sky, 10/21
