@@ -8,12 +8,12 @@ export default `
   Andrew, 2/24
   Kevin, 3/3
   Matt, 3/10
+  Vic, 3/17,
   Dan, 1/1
   Rick, 1/1
   Kevins Bro, 1/1
   Barry, 8/26
   Sky, 10/21
   Dave D, 10/28
-  Vic, 11/18,
   Sills, 11/25
 `
