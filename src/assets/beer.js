@@ -9,8 +9,8 @@ export default `
   Kevin, 3/3
   Matt, 3/10
   Vic, 3/17,
-  Dan, 1/1
-  Rick, 1/1
+  Rick, 3/30
+  Dan, 4/7
   Kevins Bro, 1/1
   Barry, 8/26
   Sky, 10/21
