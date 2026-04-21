@@ -11,9 +11,9 @@ export default `
   Vic, 3/17,
   Rick, 3/30
   Dan, 4/7
+  Sky, 4/14
+  Sills, 4/21
   Kevins Bro, 1/1
   Barry, 8/26
-  Sky, 4/14
   Dave D, 10/28
-  Sills, 11/25
 `
