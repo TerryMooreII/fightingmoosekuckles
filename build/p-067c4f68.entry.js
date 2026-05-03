@@ -1,0 +1,2 @@
+import{r as t,g as s}from"./p-7c09d4c8.js";const c=class{constructor(s){t(this,s);this.context={};this.renderer=()=>null}connectedCallback(){if(this.subscribe!=null){this.unsubscribe=this.subscribe(this.el,"context")}}disconnectedCallback(){if(this.unsubscribe!=null){this.unsubscribe()}}render(){return this.renderer(Object.assign({},this.context))}get el(){return s(this)}};export{c as context_consumer};
+//# sourceMappingURL=p-067c4f68.entry.js.map
