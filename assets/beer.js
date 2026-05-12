@@ -12,6 +12,6 @@ export default `
   Sills, 4/21
   Terry, 4/28
   Christian, 5/8
-  Barry, 8/26
+  Barry, 5/12
   Joe, 0/00
 `
