@@ -1,7 +1,7 @@
 
 export default `
   Chris, 5/19
-  Mac, 2/12
+  Mac, 5/26
   Andrew, 2/24
   Kevin, 3/3
   Matt, 3/10
