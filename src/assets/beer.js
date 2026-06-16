@@ -2,9 +2,9 @@
 export default `
   Chris, 5/19
   Mac, 5/26
+  Matt, 6/16
   Andrew, 2/24
   Kevin, 3/3
-  Matt, 3/10
   Vic, 3/17,
   Rick, 3/30
   Dan, 4/7
