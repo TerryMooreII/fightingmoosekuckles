@@ -4,7 +4,7 @@ export default `
   Mac, 5/26
   Matt, 6/16
   Andrew, 7/14
-  Kevin, 3/3
+  Kevin, 7/21
   Vic, 3/17,
   Rick, 3/30
   Dan, 4/7
