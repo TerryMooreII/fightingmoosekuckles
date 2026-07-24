@@ -5,9 +5,9 @@ export default `
   Matt, 6/16
   Andrew, 7/14
   Kevin, 7/21
-  Vic, 3/17,
+  Dan, 7/25
+  Vic, 7/26,
   Rick, 3/30
-  Dan, 4/7
   Sky, 4/14
   Sills, 4/21
   Terry, 4/28
