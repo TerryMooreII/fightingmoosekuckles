@@ -7,7 +7,7 @@ export default `
   Kevin, 7/21
   Dan, 7/25
   Vic, 7/26,
-  Rick, 3/30
+  Rick, 7/28
   Sky, 4/14
   Sills, 4/21
   Terry, 4/28
