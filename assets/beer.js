@@ -8,9 +8,10 @@ export default `
   Dan, 7/25
   Vic, 7/26,
   Rick, 7/28
+  Terry, 8/4
+  Lans, 8/11
+  Sills, 8/18
   Sky, 4/14
-  Sills, 4/21
-  Terry, 4/28
   Christian, 5/8
   Barry, 5/12
   Joe, 0/00
