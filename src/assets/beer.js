@@ -11,8 +11,8 @@ export default `
   Terry, 8/4
   Lans, 8/11
   Sills, 8/18
+  Christian, 8/25
   Sky, 4/14
-  Christian, 5/8
   Barry, 5/12
   Joe, 0/00
 `
