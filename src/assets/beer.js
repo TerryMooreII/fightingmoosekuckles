@@ -13,6 +13,6 @@ export default `
   Rick, 9/1
   Mac, 9/8
   Sky, 9/15
-  Barry, 5/12
+  Barry, 9/22
   Joe, 0/00
 `
