@@ -1,6 +1,6 @@
 
 export default `
-  Chris, 5/19
+  Chris, 10/6
   Matt, 6/16
   Andrew, 7/14
   Kevin, 7/21
