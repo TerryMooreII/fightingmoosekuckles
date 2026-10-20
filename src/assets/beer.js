@@ -1,10 +1,9 @@
 
 export default `
   Chris, 10/6
-  Matt, 6/16
   Andrew, 10/13
+  Dan, 10/20
   Kevin, 7/21
-  Dan, 7/25
   Vic, 7/26,
   Terry, 8/4
   Lans, 8/11
@@ -15,5 +14,6 @@ export default `
   Sky, 9/15
   Barry, 9/22
   Robbie, 9/29
+  Matt, 6/16
   Joe, 0/00
 `
