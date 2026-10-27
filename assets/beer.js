@@ -3,8 +3,8 @@ export default `
   Chris, 10/6
   Andrew, 10/13
   Dan, 10/20
+  Vic, 10/27,
   Kevin, 7/21
-  Vic, 7/26,
   Terry, 8/4
   Lans, 8/11
   Sills, 8/18
