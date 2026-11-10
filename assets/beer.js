@@ -5,7 +5,7 @@ export default `
   Dan, 10/20
   Vic, 10/27,
   Terry, 11/3
-  Kevin, 7/21
+  Kevin, 11/10
   Lans, 8/11
   Sills, 8/18
   Christian, 8/25
